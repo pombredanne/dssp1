@@ -47,10 +47,17 @@ class LinkedList:
                         self._tail = None
 
                 self.count -= 1
-                return true
+                return True
 
             previous = current
             current = current.nextNode
 
-        return false
+        return False
 
+    def __repr__(self):
+        string_representation = ""
+        current = self._head
+        while current:
+           string_representation = string_representation + str(current.value) + ","
+           current = current.nextNode
+        return "<LinkedList: (%s) >" % string_representation.strip(",")
