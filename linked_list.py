@@ -1,4 +1,4 @@
-class Node:
+class Node(object):
     """
     At the core of a linked list is a node, a container that provides the ability
     to store data and also connect to other nodes.
@@ -8,7 +8,7 @@ class Node:
         self.nextNode = nextNode
 
 
-class LinkedList:
+class LinkedList(object):
     def __init__(self):
         self._head = None
         self._tail = None
