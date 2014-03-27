@@ -87,3 +87,11 @@ class LinkedList:
            string_representation = string_representation + str(current.value) + ","
            current = current.nextNode
         return "<LinkedList: (%s)>" % string_representation.strip(",")
+
+
+class DoublyLinkedListNode(Node):
+    def __init__(self, value):
+        super(Node, self).__init__(value)
+        self.previous = None
+
+
