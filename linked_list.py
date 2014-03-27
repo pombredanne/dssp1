@@ -96,7 +96,7 @@ class DoublyLinkedListNode(Node):
 
 class DoublyLinkedList(LinkedList):
     def add(self, value):
-        node = DoublyLinkedList(value)
+        node = DoublyLinkedListNode(value)
 
         if self.count:
             self._tail.nextNode = node
