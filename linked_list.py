@@ -90,9 +90,9 @@ class LinkedList(object):
 
 
 class DoublyLinkedListNode(Node):
-    def __init__(self, value):
-        super(Node, self).__init__(value)
-        self.previous = None
+    def __init__(self, value, nextNode=None, previousNode=None):
+        super(DoublyLinkedListNode, self).__init__(value, nextNode)
+        self.previousNode = previousNode
 
 class DoublyLinkedList(LinkedList):
     def add(self, value):
