@@ -107,3 +107,12 @@ class DoublyLinkedList(LinkedList):
         self._tail = node
         self.count += 1
 
+    def add_first(self, value):
+        node = DoublyLinkedListNode(value)
+
+        if self.count:
+            self._head.previous = node
+            node.nextNode = self._head
+
+        self._head = node
+        self.count += 1
