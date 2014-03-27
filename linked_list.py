@@ -94,4 +94,16 @@ class DoublyLinkedListNode(Node):
         super(Node, self).__init__(value)
         self.previous = None
 
+class DoublyLinkedList(LinkedList):
+    def add(self, value):
+        node = DoublyLinkedList(value)
+
+        if self.count:
+            self._tail.nextNode = node
+            node.previous = self._tail
+        else:
+            self._head = node
+
+        self._tail = node
+        self.count += 1
 
