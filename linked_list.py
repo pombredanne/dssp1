@@ -54,6 +54,18 @@ class LinkedList:
 
         return False
 
+    def contains(self, value):
+        """
+        O(n)
+        """
+        current = self._head
+        while current:
+            if current.value == value:
+                return True
+            else:
+                current = current.nextNode
+        return False
+
     def __repr__(self):
         string_representation = ""
         current = self._head
