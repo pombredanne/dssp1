@@ -72,4 +72,4 @@ class LinkedList:
         while current:
            string_representation = string_representation + str(current.value) + ","
            current = current.nextNode
-        return "<LinkedList: (%s) >" % string_representation.strip(",")
+        return "<LinkedList: (%s)>" % string_representation.strip(",")
