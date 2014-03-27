@@ -66,6 +66,12 @@ class LinkedList:
                 current = current.nextNode
         return False
 
+    def __iter__(self):
+        current = self._head
+        while current:
+            yield current
+            current = current.nextNode
+
     def __repr__(self):
         string_representation = ""
         current = self._head
