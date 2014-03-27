@@ -54,6 +54,14 @@ class LinkedList:
 
         return False
 
+    def clear(self):
+        """
+        O(1)
+        """
+        self._head = None
+        self._tail = None
+        self.count = 0
+
     def contains(self, value):
         """
         O(n)
