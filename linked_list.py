@@ -96,11 +96,14 @@ class DoublyLinkedListNode(Node):
 
 class DoublyLinkedList(LinkedList):
     def add(self, value):
+        self.add_last(value)
+
+    def add_last(self, value):
         node = DoublyLinkedListNode(value)
 
         if self.count:
             self._tail.nextNode = node
-            node.previous = self._tail
+            node.previousNode = self._tail
         else:
             self._head = node
 
@@ -111,8 +114,24 @@ class DoublyLinkedList(LinkedList):
         node = DoublyLinkedListNode(value)
 
         if self.count:
-            self._head.previous = node
+            self._head.previousNode = node
             node.nextNode = self._head
 
         self._head = node
         self.count += 1
+
+    def remove_first(self):
+        """
+        O(1) - It doesn't take any more operations to reach the _head of a
+        longer than a shorter list.
+        """
+        if count:
+            self._head = self._head.nextNode
+            self.count -= 1
+            if not count:
+                self._tail = None
+            else:
+                self._head.previousNode = None
+            return True
+        else:
+            return False
