@@ -144,6 +144,7 @@ class DoublyLinkedList(LinkedList):
             else:
                 self._tail = self._tail.previousNode
                 self._tail.nextNode = None
+
             self.count -= 1
             return True
 
