@@ -125,13 +125,17 @@ class DoublyLinkedList(LinkedList):
         O(1) - It doesn't take any more operations to reach the _head of a
         longer than a shorter list.
         """
-        if count:
+        if self.count:
             self._head = self._head.nextNode
             self.count -= 1
-            if not count:
+            if not self.count:
                 self._tail = None
             else:
                 self._head.previousNode = None
             return True
         else:
             return False
+
+    def remove_last(self):
+        if self.count:
+
