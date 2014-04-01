@@ -138,4 +138,14 @@ class DoublyLinkedList(LinkedList):
 
     def remove_last(self):
         if self.count:
+            if self.count == 1:
+                self._head = None
+                self._tail = None
+            else:
+                self._tail = self._tail.previousNode
+                self._tail.nextNode = None
+            self.count -= 1
+            return True
+
+        return False
 
