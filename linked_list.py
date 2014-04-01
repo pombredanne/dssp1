@@ -150,3 +150,21 @@ class DoublyLinkedList(LinkedList):
 
         return False
 
+    def remove(self, value):
+        previous = None
+        current = self._head
+
+        while current:
+            if current.value == value:
+                if previous:
+                    previous.nextNode = current.nextNode
+                    if not current.nextNode:
+                        self._tail = previous
+                    else:
+                        current.nextNode.previousNode = previous
+                    self.count -= 1
+                else:
+                    self.remove_first()
+            return True
+        return False
+
