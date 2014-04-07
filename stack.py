@@ -1,6 +1,8 @@
+import linked_list
+
 class Stack(object):
     def __init__(self):
-        pass
+        self.items = linked_list.LinkedList()
 
     def push(self, value):
         pass
