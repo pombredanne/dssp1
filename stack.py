@@ -5,7 +5,7 @@ class Stack(object):
         self.items = linked_list.DoublyLinkedList()
 
     def push(self, value):
-        pass
+        self.items.add_last(value)
 
     def peek(self):
         pass
