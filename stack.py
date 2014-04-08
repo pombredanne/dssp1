@@ -14,4 +14,8 @@ class Stack(object):
         return self.items._tail.value
 
     def pop(self):
-        pass
+        if not self.items.count:
+            raise Exception("Cannot pop from an empty stack ☹")
+        tail_value = self.items._tail.value
+        self.items.remove_last()
+        return tail_value
