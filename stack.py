@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import linked_list
 
 class Stack(object):
@@ -8,7 +9,9 @@ class Stack(object):
         self.items.add_last(value)
 
     def peek(self):
-        pass
+        if not self.items.count:
+            raise Exception("Cannot peek at an empty stack ☹")
+        return self.items._tail.value
 
     def pop(self):
         pass
