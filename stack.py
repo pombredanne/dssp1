@@ -2,6 +2,9 @@
 import linked_list
 
 class Stack(object):
+    """
+    All operations on a stack are O(1)
+    """
     def __init__(self):
         self.items = linked_list.DoublyLinkedList()
 
