@@ -1,6 +1,6 @@
 from stack import Stack
 
-def calculate():
+def calculate(calculator_input):
     operators = {
         "*": lambda left, right: left * right,
         "-": lambda left, right: left - right,
@@ -8,8 +8,6 @@ def calculate():
         "/": lambda left, right: left / right,
         "%": lambda left, right: left / right,
     }
-
-    calculator_input = raw_input("Enter expression to evaluate: ")
 
     values = Stack()
     tokens = calculator_input.strip().split()
@@ -28,4 +26,8 @@ def calculate():
                 raise ValueError("Unrecognized token")
 
     return values.pop()
+
+if __name__ == '__main__':
+    calculator_input = raw_input("Enter expression to evaluate: ")
+    calculate(calculator_input)
 
